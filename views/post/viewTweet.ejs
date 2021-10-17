@@ -1,0 +1,16 @@
+<%- include('partials/head.ejs')%>
+<body>
+    <div class="container">
+        <% for(let tweet of post) { %>
+        <h2>
+            <%= tweet.comment %> 
+        </h2>
+        <h4>- <normal><%= tweet.username %> </normal></h4>
+        <form method="POST" action="/tweet/<%= tweet.id %>?_method=DELETE">
+            <button>delete</button>
+        </form>
+        <a href="/tweet/<%= tweet.id%>/edit" class="btn btn-primary">Edit</a>
+    </div>
+        <% } %>
+</body>
+</html>

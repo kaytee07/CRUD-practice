@@ -1,0 +1,13 @@
+<%- include('partials/head.ejs') %> 
+<body>
+    <form method="POST" action="/tweet/<%= id %>?_method=PATCH" >
+        <div class="container d-flex flex-column">
+            <label for="tweet">tweet</label>
+            <textarea name="comment" id="tweet" cols="25" rows="10"></textarea>
+            <br>
+            <br>
+            <button>Edit</button>
+        </div>
+    </form>
+</body>
+</html>

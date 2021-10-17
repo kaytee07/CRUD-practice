@@ -1,13 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline</title>
-    
-</head>
+<%- include('partials/head.ejs') %> 
 <body>
-    <h1>WE UP!!!</h1>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Twitter
+            </a>
+        </div>
+    </nav>
+  
+    <div class="container d-flex justify-content-center flex-column">
+        <a href="/tweet/new"><button>Tweet</button></a>
+        <%for(let post of tweets) { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= post.username %></h5>
+                <p class="card-text"><%= post.comment %></p>
+                <a href="/tweet/<%= post.id%>" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
+           <% } %>
+        
+
+    </div>
+
+    <script src="/public/js/bootstrap.min.js"></script>
 </body>
 </html>

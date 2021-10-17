@@ -1,0 +1,18 @@
+<%- include('partials/head.ejs') %>
+<body>
+    <form action="/tweet" method="POST">
+        <div class="container d-flex flex-column">
+            <label for="username">username</label>
+            <input type="text" name="username" id="username">
+            <br>
+            <br>
+            <br>
+            <label for="tweet">tweet</label>
+            <textarea name="comment" id="tweet" cols="25" rows="10"></textarea>
+            <br>
+            <br>
+            <button>Tweet</button>
+        </div>
+    </form>
+</body>
+</html>
